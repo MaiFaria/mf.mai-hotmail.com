@@ -23,4 +23,5 @@ SELECT nome,
          WHEN TO_CHAR(data_de_nascimento, 'yyyy') > '1990' AND TO_CHAR(data_de_nascimento, 'yyyy') <'1995' THEN 'Jovem'
          ELSE 'Crianças' END
          FROM tabela_de_clientes;
+
          
