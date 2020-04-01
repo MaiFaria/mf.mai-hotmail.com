@@ -43,3 +43,5 @@ FROM(SELECT cpf, COUNT(*) AS contador FROM notas_fiscais WHERE TO_CHAR(data_vend
 WHERE X.contador > 2000;
 
 
+
+
