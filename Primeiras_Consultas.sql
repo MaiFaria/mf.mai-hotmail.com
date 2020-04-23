@@ -1,4 +1,4 @@
---Consultando a maior quantidade vendida de um produto:
+--Consultando a quantidade vendida de um produto:
 SELECT *
 FROM itens_notas_fiscais
 WHERE codigo_do_produto = '1101035'
@@ -21,10 +21,10 @@ HAVING COUNT(*) > 2000;
 SELECT nome,
     CASE WHEN TO_CHAR(data_de_nascimento, 'yyyy') <= '1990' THEN 'Velho'
          WHEN TO_CHAR(data_de_nascimento, 'yyyy') > '1990' AND TO_CHAR(data_de_nascimento, 'yyyy') <'1995' THEN 'Jovem'
-         ELSE 'Crianças' END
+         ELSE 'CrianÃ§as' END
          FROM tabela_de_clientes;
 
---Levando em considedração que o valor financeiro das vendas consiste em multiplicar a quantidade pelo preço, 
+--Levando em considedraÃ§Ã£o que o valor financeiro das vendas consiste em multiplicar a quantidade pelo preÃ§o, 
 --temos a seguir o faturammento anual.
 SELECT TO_CHAR(data_venda, 'YYYY'), SUM (quantidade * preco) AS Faturamento
 FROM notas_fiscais NF INNER JOIN itens_notas_fiscais INF
